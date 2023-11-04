@@ -19,7 +19,7 @@ class Event(models.Model):
         ordering = ['date']
 
     def __str__(self):
-        return self.title
+        return self.name
 
     def number_of_likes(self):
         return self.likes.count()
@@ -28,8 +28,7 @@ class Event(models.Model):
 class Entry(models.Model):
 
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='entries')
-    player = models.ForeignKey(User, on_delete=models.CASCADE, related_name='event_entries')
-    nick_name = models.CharField(max_length=50)
+    nick_name = models.CharField(max_length=50,default="", unique=True)
     clan = models.CharField(max_length=50)
     email = models.EmailField()
     created_on = models.DateTimeField(auto_now_add=True)
@@ -37,6 +36,7 @@ class Entry(models.Model):
 
     class Meta:
         ordering = ['created_on']
+        verbose_name = "Player"
 
     def __str__(self):
         return f"{self.nick_name} clan:{self.clan}"
