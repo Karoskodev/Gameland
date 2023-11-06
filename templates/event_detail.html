@@ -8,15 +8,15 @@
                 <h1 class="event-name">
                     {{ event.name }}
                 </h1>
-                <!-- The events's date goes after | -->
-                <p class="event-subtitle"> | </p>
+                <!-- The events's date  -->
+                <p class="event-date"> {{ event.date }} </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
-                {% if "placeholder" in event.featured_image.url %}
-                <img src="https://images.pexels.com/photos/3937174/pexels-photo-3937174.jpeg" width="100%">
+                <!-- The image URL goes in the src attribute -->
+                {% if "placeholder" in event.image.url %}
+                <img src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676" width="100%">
                 {% else %}
-                <img src="" width="100%">
+                <img src="{{ event.image.url }}" width="100%">
                 {% endif %}
             </div>
         </div>
@@ -27,15 +27,39 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The event content goes inside the card-text. -->
+                <!-- The event excerpt goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text "></p>
+                <p class="card-text ">
+                    {{ event.excerpt | safe }}
+                </p>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            <hr>
+        <div class="col-md-8 card mb-4  mt-3 ">
+            <h3>Entries:</h3>
+            <div class="card-body">
+                <!-- We want a for loop inside the empty control tags to iterate through each entry in entries -->
+                {% for entry in entries %}
+                <div class="entries" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        <!-- The player's name goes here. -->
+                        {{ entry.nick_name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ entry.created_on }}
+                        </span> Clan:
+                    </p>
+                    <!-- The clan of the player goes before the | -->
+                    {{ entry.clan | linebreaks }}
+                </div>
+                <!-- Our for loop ends here -->
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-md-4 card mb-4  mt-3 ">
+            <div class="card-body">
+                
+            </div>
         </div>
     </div>
 </div>

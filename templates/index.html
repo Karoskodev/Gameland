@@ -23,7 +23,7 @@
                                     <p class="date">Start: {{ event.date }}</p>
                                 </div>
                             </div>
-                            <a href="#" class="event-link">
+                            <a href="{% url 'event_detail' event.slug %}" class="event-link">
                                 <h2 class="card-name">{{ event.name }}</h2>
                             </a>
                             <hr />
