@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Event
+from .forms import EntryForm
  
 
 class EventList(generic.ListView):
@@ -22,6 +23,7 @@ class EventDetail(View):
             "event_detail.html",
             {
                 "event": event,
-                "entries": entries
+                "entries": entries,
+                "entry_form": EntryForm()
             },
         )
