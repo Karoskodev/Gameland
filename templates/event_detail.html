@@ -49,10 +49,8 @@
                         {{ entry.nick_name }}
                         <span class=" text-muted font-weight-normal">
                             {{ entry.created_on }}
-                        </span> Clan:
+                        </span> Clan: {{ entry.clan}}
                     </p>
-                    <!-- The clan of the player goes before the | -->
-                    {{ entry.clan | linebreaks }}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
@@ -60,6 +58,13 @@
         </div>
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
+
+                {% if entered %}
+                <div class="alert alert-success" role="alert">
+                    Your entry is awaiting approval
+                </div>
+                {% else %}
+
                 {% if user.is_authenticated %}
 
                 <h2>Register here:</h2>
@@ -70,6 +75,7 @@
                     <button type="submit" class="btn btn-signup btn-lg">Submit</button>
                 </form>
 
+                {% endif %}
                 {% endif %}
                 
             </div>

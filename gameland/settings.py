@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'gameland.herokuapp.com', 'gameland-b306d6404761.herokuapp.com', '8000-karoskodev-gameland-ugzh99oo79w.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = ['localhost', 'gameland.herokuapp.com', 'gameland-b306d6404761.herokuapp.com', '8000-karoskodev-gameland-rtpbiw1zqh1.ws-eu106.gitpod.io']
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
