@@ -107,3 +107,10 @@ class EntryUpdateView(View):
             return redirect('home')  
 
         return render(request, self.template_name, {'form': form})
+
+class EntryDeleteView(View):
+    template_name = 'delete_entry.html'
+
+    def get_object(self):
+        # Retrieve the entry based on the user and any additional conditions if needed
+        return get_object_or_404(Entry, user=self.request.user)
