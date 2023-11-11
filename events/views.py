@@ -114,3 +114,7 @@ class EntryDeleteView(View):
     def get_object(self):
         # Retrieve the entry based on the user and any additional conditions if needed
         return get_object_or_404(Entry, user=self.request.user)
+
+    def get(self, request, *args, **kwargs):
+        entry = self.get_object()
+        return render(request, self.template_name, {'entry': entry})
