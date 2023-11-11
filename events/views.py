@@ -81,3 +81,6 @@ class EventDetail(View):
                     "entry_exists": True,
                 },
             )
+
+class EntryUpdateView(View):
+    template_name = 'edit_entry.html'
