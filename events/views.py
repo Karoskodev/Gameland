@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from .models import Event, Entry
 from .forms import EntryForm
+from django.contrib import messages
  
 
 class EventList(generic.ListView):
@@ -61,6 +62,9 @@ class EventDetail(View):
                     entry.event = event
                     entry.user = request.user
                     entry.save()
+
+                    messages.success(request, 'Your entry was successfully submitted!')
+
                     return render(
                         request,
                         "event_detail.html",
