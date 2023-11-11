@@ -127,5 +127,7 @@ class EntryDeleteView(View):
         entry = self.get_object()
 
         entry.delete()
+
+        messages.success(request, 'Your entry was successfully deleted!')
         
         return redirect('home')
