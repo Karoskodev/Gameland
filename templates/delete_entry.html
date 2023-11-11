@@ -3,8 +3,11 @@
 {% block content %}
     <h2>Delete Entry</h2>
     <p>Are you sure you want to delete your entry?</p>
-
-    <button type="submit">Yes, delete it</button>
-    <button type="button">No, go back</button>
     
+    <form method="post" action="{% url 'delete_entry' %}">
+        {% csrf_token %}
+        <button type="submit">Yes, delete it</button>
+    </form>
+
+    <a href="{% url 'home' %}"><button type="button">No, go back</button></a>
 {% endblock content %}
