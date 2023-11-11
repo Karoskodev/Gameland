@@ -93,3 +93,17 @@ class EntryUpdateView(View):
         form = EntryForm(instance=entry)
 
         return render(request, self.template_name, {'form': form})
+
+    def post(self, request):
+        # Get the current user's entry
+        entry = get_object_or_404(Entry, user=request.user)
+
+        # Populate the form with the current entry data and the submitted data
+        form = EntryForm(request.POST, instance=entry)
+
+        if form.is_valid():
+            form.save()
+            # Redirect to a home page 
+            return redirect('home')  
+
+        return render(request, self.template_name, {'form': form})
