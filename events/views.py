@@ -118,3 +118,10 @@ class EntryDeleteView(View):
     def get(self, request, *args, **kwargs):
         entry = self.get_object()
         return render(request, self.template_name, {'entry': entry})
+
+    def post(self, request, *args, **kwargs):
+        entry = self.get_object()
+
+        entry.delete()
+        
+        return redirect('home')
