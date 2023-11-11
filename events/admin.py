@@ -15,7 +15,7 @@ class EventAdmin(SummernoteModelAdmin):
 
 @admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
-    list_display = ('nick_name', 'clan', 'event','created_on', 'approved')
+    list_display = ('nick_name', 'clan', 'event','created_on', 'approved', 'user')
     list_filter = ('approved', 'created_on')
     search_fields = ['event', 'nick_name', 'email', 'clan']
     actions = ['approve_entries']
