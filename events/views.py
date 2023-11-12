@@ -75,16 +75,17 @@ class EventDetail(View):
                             "entry_form": EntryForm()
                         },
                     )
+                else:
+                    messages.error(request, 'Your entry was not valid, please try again!')
+
+                    return redirect('home')
+            else:
+                messages.error(request, 'Your entry already exists!')
+
+                return redirect('home')
         else:
-            return render(
-                request,
-                "event_detail.html",
-                {
-                    "event": event,
-                    "entries": entries,
-                    "entry_exists": True,
-                },
-            )
+            messages.error(request, 'To submit an entry,please log in or register!')
+            return redirect('home')
 
 class EntryUpdateView(View):
     template_name = 'edit_entry.html'

@@ -13,16 +13,13 @@ class Event(models.Model):
     image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='event_likes', blank=True)
+    
 
     class Meta:
         ordering = ['date']
 
     def __str__(self):
         return self.name
-
-    def number_of_likes(self):
-        return self.likes.count()
 
 
 class Entry(models.Model):
