@@ -62,7 +62,7 @@
                 {% if entry_exists %}
                 <h2>Uz registrovany</h2>
 
-                <a href="{% url 'edit_entry' %}">
+                <a href="{% url 'edit_entry' event=event.slug %}">
                     <button>Edit</button>
                 </a>
 
