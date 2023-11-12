@@ -124,10 +124,6 @@ class EntryDeleteView(View):
         entry = get_object_or_404(queryset, *args, **kwargs)
         return entry
 
-    # def get_object(self, *args, **kwargs):
-    
-    #     return get_object_or_404(Entry, user=self.request.user)
-
     def get(self, request, *args, **kwargs):
         entry = self.get_object()
         return render(request, self.template_name, {'entry': entry})
