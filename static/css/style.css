@@ -1,3 +1,23 @@
+/* navbar */
+
+.navbar {
+    background-color: #eaf4fd;
+}
+
+.navbar-brand {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-nav {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .tlac {
     background-color: blueviolet;
 }
@@ -7,5 +27,5 @@ form > ul {
 }
 
 .main-bg {
-    background-color: pink;
+    background-color: #bfccd8;
 }
