@@ -118,9 +118,15 @@ class EntryUpdateView(View):
 class EntryDeleteView(View):
     template_name = 'delete_entry.html'
 
-    def get_object(self):
-        # Retrieve the entry based on the user and any additional conditions if needed
-        return get_object_or_404(Entry, user=self.request.user)
+    def get_object(self, *args, **kwargs):
+        
+        queryset = Entry.objects.filter(user=self.request.user, event__slug=self.kwargs['event'])
+        entry = get_object_or_404(queryset, *args, **kwargs)
+        return entry
+
+    # def get_object(self, *args, **kwargs):
+    
+    #     return get_object_or_404(Entry, user=self.request.user)
 
     def get(self, request, *args, **kwargs):
         entry = self.get_object()
