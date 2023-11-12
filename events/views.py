@@ -108,7 +108,7 @@ class EntryUpdateView(View):
         if form.is_valid():
             form.save()
 
-            messages.success(request, 'Your entry was successfully updated!')
+            messages.success(request, 'Your entry was successfully edited!')
             # Redirect to a home page 
             return redirect('home')  
 
