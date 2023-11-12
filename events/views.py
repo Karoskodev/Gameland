@@ -90,18 +90,18 @@ class EventDetail(View):
 class EntryUpdateView(View):
     template_name = 'edit_entry.html'
 
-    def get(self, request):
+    def get(self, request, event, *args, **kwargs):
         # Get the current user's entry
-        entry = Entry.objects.get(user=request.user)
+        entry = Entry.objects.get(user=request.user, event__slug=event)
 
         # Populate the form with the current entry data
         form = EntryForm(instance=entry)
 
         return render(request, self.template_name, {'form': form})
 
-    def post(self, request):
+    def post(self, request, event, *args, **kwargs):
         # Get the current user's entry
-        entry = get_object_or_404(Entry, user=request.user)
+        entry = get_object_or_404(Entry, user=request.user, event__slug=event)
 
         # Populate the form with the current entry data and the submitted data
         form = EntryForm(request.POST, instance=entry)
