@@ -12,16 +12,16 @@
                 </h1>
                 <!-- The events's date  -->
                 <p class="event-date">Start: {{ event.date }} </p>
-                <p class="card-text ">
+                <p class="card-text exce">
                     {{ event.excerpt | safe }}
                 </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The image URL goes in the src attribute -->
                 {% if "placeholder" in event.image.url %}
-                <img class="eimage" src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676" width="40%">
+                <img src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676" width="40%">
                 {% else %}
-                <img class="eimage" src="{{ event.image.url }}" width="40%">
+                <img src="{{ event.image.url }}" width="40%">
                 {% endif %}
             </div>
         </div>
@@ -29,19 +29,24 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="row entries">
+        <div class="col-md-8 card mb-4  mt-3 elist">
             <h3>Entries:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each entry in entries -->
                 {% for entry in entries %}
                 <div class="entries" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The player's name goes here. -->
-                        {{ entry.nick_name }}
-                        <span class=" text-muted font-weight-normal">
+                        <span class=" text-muted font-weight-normal date">
                             {{ entry.created_on }}
-                        </span> Clan: {{ entry.clan}}
+                        </span>
+                        <span class="user">
+                        {{ entry.user }}
+                        </span>
+                        the  {{ entry.nick_name }} 
+                        <span class="clan">
+                        Clan: {{ entry.clan}}
+                        </span>
                     </p>
                 </div>
                 <!-- Our for loop ends here -->
@@ -72,7 +77,6 @@
                 {% if user.is_authenticated %}
 
                 <h2>Register here:</h2>
-                <p>Ingame</p>
 
                 <form method="post" style="margin-top: 1.3em;">
                     {{ entry_form | crispy }}

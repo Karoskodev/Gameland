@@ -80,3 +80,28 @@ form > ul {
     padding: 1%;
     color: rgba(0, 0, 0, 0.80);
 }
+
+/* event detail page */
+
+.masthead-text {
+    margin-top: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.user {
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.clan {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 15px;
+}
+
+.entries {
+    margin-top: 20px;
+    background-color: #eaf4fd;
+}
+.date {
+    font-size: 80%;
+}
