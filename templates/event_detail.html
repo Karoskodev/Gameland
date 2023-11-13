@@ -11,14 +11,17 @@
                     {{ event.name }}
                 </h1>
                 <!-- The events's date  -->
-                <p class="event-date"> {{ event.date }} </p>
+                <p class="event-date">Start: {{ event.date }} </p>
+                <p class="card-text ">
+                    {{ event.excerpt | safe }}
+                </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The image URL goes in the src attribute -->
                 {% if "placeholder" in event.image.url %}
-                <img src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676" width="100%">
+                <img class="eimage" src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676" width="40%">
                 {% else %}
-                <img src="{{ event.image.url }}" width="100%">
+                <img class="eimage" src="{{ event.image.url }}" width="40%">
                 {% endif %}
             </div>
         </div>
@@ -26,17 +29,6 @@
 </div>
 
 <div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <!-- The event excerpt goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text ">
-                    {{ event.excerpt | safe }}
-                </p>
-            </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Entries:</h3>
@@ -80,6 +72,7 @@
                 {% if user.is_authenticated %}
 
                 <h2>Register here:</h2>
+                <p>Ingame</p>
 
                 <form method="post" style="margin-top: 1.3em;">
                     {{ entry_form | crispy }}
