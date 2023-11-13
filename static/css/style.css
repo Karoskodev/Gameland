@@ -29,3 +29,29 @@ form > ul {
 .main-bg {
     background-color: #bfccd8;
 }
+
+/* entry */
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -3px;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.card-name {
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    min-width: 30%;
+    min-height: 10%;
+    bottom : 20%;
+    left: -3px;
+    background-color: rgba(255, 255, 255, 0.95);
+}

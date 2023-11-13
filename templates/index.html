@@ -22,17 +22,16 @@
                                 <div class="image-flash">
                                     <p class="date">Start: {{ event.date }}</p>
                                 </div>
+
+                                {% if user.is_authenticated %}
+                                <a href="{% url 'event_detail' event.slug %}" class="event-link">
+                                    <h2 class="card-name">{{ event.name }} Enter HERE!</h2>
+                                </a>
+                                {% else %}
+                                <p class="card-name">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">login</a> to join <br>{{ event.name }}</p>
+                                {% endif %}
+
                             </div>
-
-                            {% if user.is_authenticated %}
-                            <a href="{% url 'event_detail' event.slug %}" class="event-link">
-                                <h2 class="card-name">{{ event.name }}</h2>
-                            </a>
-                            {% else %}
-                            <p>Please <a href="{% url 'account_signup' %}">register</a> to join this event.</p>
-                            {% endif %}
-
-                            </a>
                             <hr />
                         </div>
                     </div>
