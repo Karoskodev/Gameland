@@ -6,7 +6,7 @@
 
 .navbar-brand {
     font-family: 'Indie Flower', cursive;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 800;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -60,4 +60,23 @@ form > ul {
     bottom : 20%;
     left: -3px;
     background-color: rgba(255, 255, 255, 0.95);
+}
+
+
+/* footer */
+
+
+.social-networks {
+    text-align: center;
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 170%;
+    margin: 1%;
+    padding: 1%;
+    color: rgba(0, 0, 0, 0.80);
 }
