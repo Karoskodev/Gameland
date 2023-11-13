@@ -19,7 +19,9 @@
 }
 
 .tlac {
-    background-color: blueviolet;
+    margin-top: 5px;
+    background-color: rgb(254, 253, 255);
+    border: 1px solid #000;
 }
 
 form > ul {
@@ -48,7 +50,7 @@ form > ul {
     bottom: 5%;
     min-width: 30%;
     left: -3px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.80);
 }
 
 .card-name {
@@ -59,7 +61,7 @@ form > ul {
     min-height: 10%;
     bottom : 20%;
     left: -3px;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 
@@ -86,6 +88,11 @@ form > ul {
 .masthead-text {
     margin-top: 20px;
     font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+}
+
+.obr {
+    margin-top: 20px;
 }
 
 .user {
@@ -99,9 +106,14 @@ form > ul {
 }
 
 .entries {
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: #eaf4fd;
 }
 .date {
     font-size: 80%;
+}
+
+.edit, .delete {
+    margin-top: 17px;
+    margin-left: 10px;
 }

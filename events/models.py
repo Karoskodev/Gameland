@@ -31,7 +31,9 @@ class Entry(models.Model):
         ('ByteBrawler', 'ByteBrawler'),
         ('BinaryNinja', 'BinaryNinja'),
         ('AlgorithmMaster', 'AlgorithmMaster'),
-        ('ScriptingSorcerer', 'ScriptingSorcerer'),
+        ('PythonWhistler', 'PythonWhistler'),
+        ('DjangoEater', 'DjangoEater'),
+        ('JavaDriver', 'JavaDriver'),
     ]
 
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='entries')

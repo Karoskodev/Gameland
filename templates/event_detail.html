@@ -19,9 +19,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The image URL goes in the src attribute -->
                 {% if "placeholder" in event.image.url %}
-                <img src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676" width="40%">
+                <img class="obr" src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676" width="40%">
                 {% else %}
-                <img src="{{ event.image.url }}" width="40%">
+                <img class="obr" src="{{ event.image.url }}" width="40%">
                 {% endif %}
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each entry in entries -->
                 {% for entry in entries %}
-                <div class="entries" style="padding: 10px;">
+                <div class="entries">
                     <p class="font-weight-bold">
                         <span class=" text-muted font-weight-normal date">
                             {{ entry.created_on }}
@@ -57,14 +57,17 @@
             <div class="card-body">
 
                 {% if entry_exists %}
-                <h2>Uz registrovany</h2>
+                <h3>You are already registered.</h3>
+
+                {{ entry.user }}
 
                 <a href="{% url 'edit_entry' event=event.slug %}">
-                    <button>Edit</button>
+                    <button class="edit">Edit</button> 
                 </a>
-
+                
+                <br>
                 <a href="{% url 'delete_entry' event=event.slug %}">
-                    <button>Delete</button>
+                    <button class="delete">Delete</button> 
                 </a>
                 
                 {% else %}
@@ -81,7 +84,7 @@
                 <form method="post" style="margin-top: 1.3em;">
                     {{ entry_form | crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button type="submit" class="btn btn-signup btn-lg tlac">Submit</button>
                 </form>
 
                 {% endif %}
