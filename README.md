@@ -270,3 +270,60 @@ If the specific user story does not auto pop up then please click on it from the
  - messages after entry edit or deletion
 
 ---
+
+<a name="left"></a>
+## Features left to Implement 
+
+
+ - Add ability for users to open pofile page and add profile picture
+ - Add ability for users to open a list of all their entries
+ - Add ability for users to create Events
+ - Add ability for users to reset or change the password
+ - Allow users to sign up with social media
+ - Add gallery with photos from events
+
+ ---
+
+ <a name="tech"></a>
+##  Technology Used
+
+### Html
+
+ - Used to structure my webpages and the base templating language
+
+### CSS
+
+ - Custom CSS to make it as close to the wireframes as I felt it needed to be.
+
+### JavaScript
+
+ -  Used to add timeout function for messages as well as to enable the menu on index.html
+
+### Python
+
+ -  Used for the logic in this project.
+
+### Django
+
+ -  Framework used to build this project. Provides a ready installed admin panel and includes many helper template tags that make writing code quick and efficient.
+
+### Font Awesome
+
+ -  Icon library used for the profile and admin panel section.
+
+### Bootstrap 5
+ - Used as the base front end framework to work alongside Django
+
+### GitHub
+ - Used to store the code for this project & for the projects Kanban board used to complete it.
+
+### Heroku
+- Used to host and deploy this project
+
+### Heroku PostgreSQL
+-Heroku PostgreSQL was used as the database for this project during development and in production.
+
+### Cloudinary
+- Used to host the static files for this project including user profile images.
+
+---

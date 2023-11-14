@@ -15,10 +15,10 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in event.image.url %}
-                                <img class="card-img-top"
+                                <img class="card-img-top" alt="event image"
                                     src="https://media.discordapp.net/attachments/1008571023047798794/1170856548302590002/karosko_esport_tournament_pixelart_517d936c-a5d4-4cfe-937b-81e70e41e684.png?ex=655a9022&is=65481b22&hm=7774deeb79a9d96e2a4a956fc47f8d544d0a1206263c8eb3069a04c20bdbb19d&=&width=676&height=676">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ event.image.url }}">
+                                <img class="card-img-top" alt="event image" src=" {{ event.image.url }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="date">Start: {{ event.date }}</p>
