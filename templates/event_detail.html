@@ -58,8 +58,8 @@
 
                 {% if entry_exists %}
                 <h3>You are already registered.</h3>
-
-                {{ entry.user }}
+                <p id="approv-msg">If your registration isn't visible in entries, it's awaiting approval.</p>
+                
 
                 <a href="{% url 'edit_entry' event=event.slug %}">
                     <button class="edit">Edit</button> 
