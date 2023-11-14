@@ -66,3 +66,29 @@
 |approved|BooleanField|
 
 ---
+
+# UX design
+
+## Overview
+
+Gameland is your go-to for immersive events.  
+The main goal of the website is to allow users to view Events, user can create an account and use it to entry Event.
+
+### Design
+Once the name was chosen I decided that I wanted this website to be modern, minimalistic in it's appearance to use colors of blue and White where possible.
+
+### Site User
+
+ - Someone looking to attend Esport events
+ - Someone who would prefer to make bookings digitally rather than speaking with others
+
+###  Goals for the website
+
+- Easily check out Events beforehand.
+- Quickly book your spot in Events and store entries in a neat place for staff to accept / decline in an easy manner depending on occupancy.
+
+## Wireframes
+
+###  Wireframes
+
+> index.html
