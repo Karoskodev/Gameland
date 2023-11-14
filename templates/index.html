@@ -29,7 +29,7 @@
                                     <h2 class="card-name"><span style="font-weight: bold;">{{ event.name }}</span> Enter HERE!</h2>
                                 </a>
                                 {% else %}
-                                <p class="card-name">Please <a href="{% url 'account_signup' %}">register</a> or <a href="{% url 'account_login' %}">login</a> to join <br>{{ event.name }}</p>
+                                <p class="card-name2">For entering the event,<br> you must <a href="{% url 'account_login' %}">login</a> to to the website.
                                 {% endif %}
 
                             </div>
