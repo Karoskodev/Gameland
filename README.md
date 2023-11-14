@@ -327,3 +327,64 @@ If the specific user story does not auto pop up then please click on it from the
 - Used to host the static files for this project including user profile images.
 
 ---
+
+<a name="testing"></a>
+## Testing
+
+
+### Testing Phase
+
+#### Manual Testing
+
+> Each user story was manually tested in line with intended functionality on both desktop & mobile.
+> As this project was driven by my own User Stories I felt manual testing was applicable on all logic code.
+
+
+>If the intended outcome completes then this will be flagged as pass. If it does not then this is a fail.
+
+#### Account Registration Tests
+| Test |Result  |
+|--|--|
+| User can create account | Pass |
+| User can log into account| Pass|
+|User can log out of account|Pass|
+
+---
+
+#### User Navigation Tests
+
+| Test |Result  |
+|--|--|
+|User can navigate to Events | Pass |
+|User can access Events details| Pass|
+|SuperUser can access admin panel|Pass|
+
+---
+
+#### Account Security Tests
+
+| Test |Result  |
+|--|--|
+|Non logged in user cannot access Events details | Pass |
+|Non logged in user cannot register in to Event| Pass|
+|Non superuser cannot access admin panel|Pass|
+
+---
+
+#### Admin Tests
+
+| Test |Result  |
+|--|--|
+|Admin can add Events |Pass|
+|Admin can edit events|Pass|
+|Admin can delete events|Pass|
+|Events they display correctly on front-end when updated / added|Pass|
+|Admin can approve Events entries |Pass|
+
+#### Events Entries Tests
+
+| Test |Result  |
+|--|--|
+|User can register in to event |Pass|
+|User can edit events registrations|Pass|
+|User can delete events registrations|Pass|
