@@ -38,10 +38,8 @@ class Entry(models.Model):
 
     event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='entries')
     user = models.ForeignKey(User, related_name='entries', blank=True, null=True, on_delete=models.CASCADE)
-    # user = models.OneToOneField(User, related_name='entry', blank=True, null=True, on_delete=models.CASCADE)
     nick_name = models.CharField(max_length=50,default="", choices=TITLES)
     clan = models.CharField(max_length=50)
-    email = models.EmailField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
 
