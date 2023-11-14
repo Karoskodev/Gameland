@@ -34,3 +34,35 @@
 #### Pre-project Planning
 
 > Database Structure
+
+![Lucid Diagram](static/images/lucid.png)
+
+- When I decided on my initial concept of Gameland I knew I needed to understand what type of data I would need to store and the relationships between them.
+- I created the above diagram on lucidchart to help guide me.
+
+### Database Schema
+#### Event Model
+
+| id | Field |
+|--|--|
+| name |CharField  |
+| slug |SlugField|
+|date|DateTimeField|
+|image|CloudinaryField|
+|excerpt|TextField|
+|status|IntegerField|
+
+---
+
+#### Entry Model
+
+| id | Field |
+|--|--|
+| event |ForeignKey|
+|user|ForeignKey|
+|nickname|Charfield|
+|clan|Charfield|
+|created_on|DateTimeField|
+|approved|BooleanField|
+
+---
