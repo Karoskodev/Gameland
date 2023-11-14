@@ -91,4 +91,21 @@ Once the name was chosen I decided that I wanted this website to be modern, mini
 
 ###  Wireframes
 
+My goal for this project was to create a simple sleek website that allowed the admin create, change, filter or delete an Events and the users register to the website and create, edit,delete entry for Events
+
 > index.html
+
+![Index page](static/images/index.png)
+
+![Index page](static/images/index111.jpg)
+
+> event_detail.html
+
+![event page](static/images/event.png)
+
+![event page](static/images/event111.png)
+
+
+ 
+
+## Agile Development
