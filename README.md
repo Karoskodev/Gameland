@@ -179,3 +179,94 @@ If the specific user story does not auto pop up then please click on it from the
  - The user can register on the website
  - The user can log in to the website
  - The user can log out of the website
+
+### index.html
+
+> Navbar
+
+![Navbar](static/images/navbar.png)
+
+ - navbar consists of Logo, Home, Register, Login links.
+ - If the user is logged in they have access to logout and the username is displayed on the right side of navbar.
+
+ ![Navbar](static/images/navbar2.png)
+---
+
+> Events
+
+![Events](static/images/eventsLogin.jpg)
+
+- list of events with start dates and with message asking users to log in if they want to enter event
+- If the user is logged in they can enter event.
+
+![Events](static/images/events.jpg)
+
+---
+
+> Footer
+
+![Footer](static/images/footer.png)
+
+
+- footer with social links.
+
+---
+
+### event_detail.html
+
+> Event info
+
+![Event info](static/images/eventInfo.png)
+
+ - event info with event image
+
+---
+
+> Entries
+
+![Entries](static/images/entries.png)
+
+ - list of entries for opened event with dates, users, nicknames, clans
+
+---
+
+> Event register form
+
+![event register form](static/images/register.png)
+
+ - event register form with nickname and clan fields
+
+---
+
+> Approval message
+
+![Aproval message](static/images/approval.png)
+
+ - awaiting approval message after event registration submition
+
+---
+
+> Edit entry
+
+![Edit entry](static/images/edit.png)
+
+ - user can edit nickname and clan
+
+---
+
+> Delete entry
+
+![Delete entry](static/images/delete.png)
+
+ - user can delete entry
+
+---
+
+> Messages
+
+![Messages](static/images/message1.png)
+![Messages](static/images/message2.png)
+
+ - messages after entry edit or deletion
+
+---
