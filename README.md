@@ -388,3 +388,26 @@ If the specific user story does not auto pop up then please click on it from the
 |User can register in to event |Pass|
 |User can edit events registrations|Pass|
 |User can delete events registrations|Pass|
+
+---
+
+## Google Lighthouse Testing
+
+> index.html
+
+
+![Google Lighthouse Index](static/images/test1.png)
+
+> event_detail.html
+
+
+![Google Lighthouse Event](static/images/score2.png)
+
+
+## HTML W3 Validation
+
+### index.html
+
+
+![W3 Validation checker](static/images/htmlcheck.png)
+#### Result: Multiple Errors Related to Django Templates, These errors can be safely ignored, as they are specifically tied to the Django templating system.
