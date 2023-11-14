@@ -106,6 +106,34 @@ My goal for this project was to create a simple sleek website that allowed the a
 ![event page](static/images/event111.png)
 
 
- 
-
 ## Agile Development
+
+<a name="agile"></a>
+
+### Agile Overview
+
+This project was started alongside a GitHub Projects Page to track and manage the expected workload ahead.
+The aim was to set out my expected workload, list the user stories and ultimately finish the site in good time.
+
+To see Kanban please click [here](https://github.com/users/Karoskodev/projects/9).
+
+At the initial stages I decided on 2 epics and 10 user stories. When I started working on user stories and epics I moved them from todo to in progress, when I finished them I moved them from in progress to done
+
+#### User stories
+
+#####  Completed User Stories
+
+To view any of the expanded details of the user stories please click on a user story below to be taken to the Kanban project.
+If the specific user story does not auto pop up then please click on it from the project page and you will see the details and comments.
+
+ 1. [USER STORY: Early Deployment #1](https://github.com/Karoskodev/Gameland/issues/1)
+ 2. [USER STORY: Account registration #2](https://github.com/Karoskodev/Gameland/issues/2)
+ 3. [USER STORY: View Events List #3](https://github.com/Karoskodev/Gameland/issues/3)
+ 4. [USER STORY: Open an Event #4](https://github.com/Karoskodev/Gameland/issues/4)
+ 5. [USER STORY: Join an Event #5](https://github.com/Karoskodev/Gameland/issues/5)
+ 6. [USER STORY: Change Event Registration #6](https://github.com/Karoskodev/Gameland/issues/6)
+ 7. [USER STORY: Remove Event registration #7](https://github.com/Karoskodev/Gameland/issues/7)
+ 8. [USER STORY: List of Players #8](https://github.com/Karoskodev/Gameland/issues/8)
+ 9. [USER STORY: Manage Events #9](https://github.com/Karoskodev/Gameland/issues/9)
+ 10. [USER STORY: Approve Registrations #10](https://github.com/Karoskodev/Gameland/issues/10)
+
