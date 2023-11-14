@@ -25,10 +25,12 @@
                                 </div>
 
                                 {% if user.is_authenticated %}
+                                <!-- Display a link to the event detail page for authenticated users -->
                                 <a href="{% url 'event_detail' event.slug %}" class="event-link">
                                     <h2 class="card-name"><span style="font-weight: bold;">{{ event.name }}</span> Enter HERE!</h2>
                                 </a>
                                 {% else %}
+                                <!-- Display a message for non-authenticated users to log in to enter the event -->
                                 <p class="card-name2">For entering the event,<br> you must <a href="{% url 'account_login' %}">login</a> to to the website.
                                 {% endif %}
 
@@ -37,6 +39,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Check if the current iteration counter is divisible by 3 to create a new row -->
                 {% if forloop.counter|divisibleby:3 %}
             </div>
             <div class="row">
@@ -46,6 +49,7 @@
         </div>
     </div>
     {% if is_paginated %}
+    <!-- Pagination for navigating through event pages -->
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
