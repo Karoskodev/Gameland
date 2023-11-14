@@ -410,4 +410,20 @@ If the specific user story does not auto pop up then please click on it from the
 
 
 ![W3 Validation checker](static/images/htmlcheck.png)
-#### Result: Multiple Errors Related to Django Templates, These errors can be safely ignored, as they are specifically tied to the Django templating system.
+### Result: Multiple Errors Related to Django Templates, These errors can be safely ignored, as they are specifically tied to the Django templating system.
+
+### CSS Validation
+
+
+![w3 Jigsaw CSS checker](static/images/css.png)
+#### Result: Pass - No Errors
+
+---
+
+<a name="bugs"></a>
+## **Bugs**
+
+#### W3 Validation
+![W3 Validation checker](static/images/error.png)
+
+- When I ran my code through the w3 html validator I got Multiple Errors Related to Django Templates, These errors can be safely ignored, as they are specifically tied to the Django templating system.
