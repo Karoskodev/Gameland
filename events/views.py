@@ -4,14 +4,14 @@ from .models import Event, Entry
 from .forms import EntryForm
 from django.contrib import messages
  
-
+# View for displaying a list of events
 class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1).order_by('date')
     template_name = 'index.html'
     paginate_by = 6
 
-
+# View for displaying details and handling entries for a specific event
 class EventDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -21,6 +21,7 @@ class EventDetail(View):
 
         entry_exists = Entry.objects.filter(user=request.user, event=event).exists()
 
+        # Render the appropriate template based on whether the user has already entered
         if not entry_exists:
 
             return render(
@@ -87,6 +88,7 @@ class EventDetail(View):
             messages.error(request, 'To submit an entry,please log in or register!')
             return redirect('home')
 
+# View for updating an existing entry
 class EntryUpdateView(View):
     template_name = 'edit_entry.html'
 
@@ -115,6 +117,7 @@ class EntryUpdateView(View):
 
         return render(request, self.template_name, {'form': form})
 
+# View for deleting an existing entry
 class EntryDeleteView(View):
     template_name = 'delete_entry.html'
 
@@ -129,6 +132,7 @@ class EntryDeleteView(View):
         return render(request, self.template_name, {'entry': entry})
 
     def post(self, request, *args, **kwargs):
+        # Handle form submission for deleting an existing entry
         entry = self.get_object()
 
         entry.delete()

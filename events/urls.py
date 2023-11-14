@@ -2,6 +2,7 @@ from . import views
 from django.urls import path
 
 
+# Define URL patterns for the app
 urlpatterns = [
     path('', views.EventList.as_view(), name='home'),
     path('edit_entry/<slug:event>/', views.EntryUpdateView.as_view(), name='edit_entry'),
