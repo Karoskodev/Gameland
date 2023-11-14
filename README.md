@@ -137,3 +137,45 @@ If the specific user story does not auto pop up then please click on it from the
  9. [USER STORY: Manage Events #9](https://github.com/Karoskodev/Gameland/issues/9)
  10. [USER STORY: Approve Registrations #10](https://github.com/Karoskodev/Gameland/issues/10)
 
+
+## Features
+
+<a name="features"></a>
+
+#### User based Features Implemented:
+
+ - **Users can** create an account (**Create**)
+ - **Users can** log into their account
+ - **Users can** log out of their account
+ - **Users can** view list of Events (**Read**)
+ - **Users can** make a registration for an event **(Create)**
+ - **Users can** add their nick name and clan for each entry (**Create**)
+ - **Users can** view entries for specific event (**Read**)
+ - **Users can** edit their nickname and clan for existing entry (**Update**)
+ - **Users can** delete entry at any stage of the process (**Delete**)
+
+#### Account restrictions:
+ - **Users cannot** access event details without being logged in
+ - **Users cannot** edit entry without being logged in
+ - **Users cannot** create multiple entries for one event
+ - **Users cannot** access the admin panel of the website unless they have admin status
+
+#### Website features:
+
+##### Dynamic Events listings
+
+ - The website displays events that are updated on the back end and shown on the front-end.
+ - If the event is updated by the business owner then this change will reflect on the front end.
+ - This allows the business owner to make easy changes.
+
+
+##### Events registration System
+
+ - Once a user has created an account they can view events details and create registration requests for event.
+ - Once a user is registered in an event he can edit or delete his entry.
+
+##### Website registration System
+
+ - The user can register on the website
+ - The user can log in to the website
+ - The user can log out of the website
